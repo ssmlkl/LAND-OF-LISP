@@ -1,0 +1,37 @@
+#|(print (+ 1 22))
+(cons 'dogs (cons 'pigs (cons 'cat 'nil)))
+(cadar'((dog cat hello) (dig saf sdf)))
+(defun my-length (list)
+  (if list
+      (1+ (my-length (cdr list)))
+      0))
+(my-length '(list with four symbols))
+(eq nil '())
+  (if (eq 2 2)
+       'T
+       'F)
+(defvar a 3)
+(if (= a 3)
+   (progn (setf a 5)
+          'T)
+   'F)
+(print a)
+|#
+
+(defvar *arch-enemy* nil)
+(defun pudding-eater (person)
+  (cond ((eq person 'henry)
+         (setf *arch-enemy* 'stupid-lisp-alien)
+         '(curse you lisp alien -you ate my pudding))
+        ((eq person 'johnny)
+         (setf *arch-enemy* 'useless-old-johnny)
+         '(i hope you choked on my pudding johnny))
+        (t
+         '(why you eat my pudding stranger?))))
+(pudding-eater 'johnny)
+(princ *arch-enemy*)
+(pudding-eater 'henry)
+(pudding-eater (= 1 1))
+(if (member nil '(5 4 2 4 nil))
+    'T
+    'F)
